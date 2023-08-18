@@ -18,3 +18,4 @@ machine that i manage in the laboratory i work on. Currently present documents:
 |         Doc         |      Description     |
 |---------------------|----------------------|
 |  c3sldb1_zfs_setup  | Zfs setup in our database machine, raid10 and cache configs included |
+|    monetdb_setup    | A VM created from scratch with RAID0 and monetdb |

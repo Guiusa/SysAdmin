@@ -76,10 +76,35 @@ configuration
 
 `
 /etc/mdadm/mdadm.conf:
+
 ARRAY /dev/md0 metadata=1.2 UUID=xyzw1234:xyzw1234:xyzw1234:xyzw1234
 `
 
 `
 umount /dev/rbd0
+
 rbd unmap vm-268-disk-0
+`
+
+## MonetDB install
+
+I decided to compile manually MonetDB following it's howto, as present in
+**https://github.com/MonetDB/MonetDB**.
+
+Firstly, i created the source directories:
+
+`
+git clone https://github.com/MonetDB/MonetDB
+`
+Than, i runned:
+
+`
+cmake /root/MonetDB/
+`
+
+In the first run, cmake returned an error because BISON wasn't present, so i 
+simply installed bison  package with apt and runned again. Then i runned:
+
+`
+cmake --build . --target install
 `
